@@ -105,9 +105,9 @@ class Query:
 		queryVec = self.query_vec(query)
 		#print(queryVec)
 		results = [[self.dotProduct(vectors[result], queryVec), result] for result in resultDocs]
-		#print(results)
+		print(results)
 		results.sort(key=lambda x: x[0])
-		#print(results)
+		print(results)
 		results = [x[1] for x in results]
 		return results
 
@@ -119,4 +119,4 @@ class Query:
 	Find the cosine distance between each document and the query, and put the results in descending order.
 """
 
-q = Query(['pg135.txt', 'pg76.txt', 'pg5200.txt'])
+#q = Query(['pg135.txt', 'pg76.txt', 'pg5200.txt'])
